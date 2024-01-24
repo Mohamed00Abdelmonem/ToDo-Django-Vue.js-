@@ -39,11 +39,26 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'taggit',
+    'rest_framework',
+    
 
 
 
     'todo',
 ]
+
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
+
+
+TAGGIT_CASE_INSENSITIVE = True
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -56,6 +71,10 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'project.urls'
+
+
+
+
 
 TEMPLATES = [
     {
