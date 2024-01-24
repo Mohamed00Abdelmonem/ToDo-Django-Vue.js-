@@ -11,5 +11,5 @@ class TaskSerializer(TaggitSerializer, serializers.ModelSerializer):
 
     class Meta:
         model = Tasks   
-        fields = '__all__'
+        fields = ['user', 'task', 'tags', 'status', 'created_at']
 
