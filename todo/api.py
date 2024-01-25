@@ -5,6 +5,6 @@ from rest_framework import generics
 
 
 
-class TaskList(generics.ListCreateAPIView):
+class TaskList(generics.ListAPIView):
     queryset = Tasks.objects.all()
     serializer_class = TaskSerializer
